@@ -7,7 +7,7 @@ fun main(){
 
 println("\nAverage of number is : " + average())
 searchNumber()
-reverseIntArray() 
+reverseIntArray()
 ceasarcipher()
 }
 
