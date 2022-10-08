@@ -1,14 +1,21 @@
 
 // ceasarcipher function for encryption and decryption of data
 
-import java.util.Arrays
+
 //arrAvg function accepting an array and produces the average of all values
 fun main(){
 
 println("\nAverage of number is : " + average())
-searchNumber()
-reverseIntArray()
+var isFound = searchNumber()
+if(isFound)
+println("The number is found.")
+else
+println( "The number is not found.")
+
+var reversedArray =  reverseIntArray()
+println("Reversed Array: "+ printIntarray(reversedArray))
 ceasarcipher()
+
 }
 
 fun ceasarcipher(){
@@ -67,6 +74,8 @@ fun average(): Double{
        println("Enter number  ${i+ 1} : ")
        arr[i] = readln().toInt()
    }
+
+
   /* println("Original Array: " + arr.joinToString(separator ",")) */
 
   for(i in 0 until arraySize/2){
@@ -76,13 +85,12 @@ fun average(): Double{
     arr[arraySize - 1 - i] = aux
   }
 
-  println("Reversed Array: "+ Arrays.toString(arr))
 
 }
 
 //arrContain: search a value in an array
 
-fun searchNumber(){
+fun searchNumber():Boolean{
   println("Please enter how many numbers to want: ")
   var arraySize = readln().toInt()
   var arr = IntArray(arraySize)
@@ -103,8 +111,17 @@ fun searchNumber(){
       break
     }
   }
-  if(found)
-  println("$targetNumber is found.")
-  else
-  println( "$targetNumber is not found.")
+
+  return found
+
+}
+
+fun printIntarray(array:IntArray):String {
+  var result = "[ "
+
+  for (i in array){
+  result = result + i + " "
+}
+result += "]"
+return result
 }
