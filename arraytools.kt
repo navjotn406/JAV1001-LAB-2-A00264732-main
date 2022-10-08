@@ -1,8 +1,8 @@
+//name Navjot Singh
+//Student ID A00264732
+//jav1001-lab-3 arraytools
 
-// ceasarcipher function for encryption and decryption of data
 
-
-//arrAvg function accepting an array and produces the average of all values
 fun main(){
 
 println("\nAverage of number is : " + average())
