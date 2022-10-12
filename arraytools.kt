@@ -5,19 +5,28 @@
 
 fun main(){
 
+//first function ceasarcipher
+ceasarcipher()
+
+//second function collect the average of a given array
 println("\nAverage of number is : " + average())
+
+//third function check whether a number is present in an array or not
 var isFound = searchNumber()
 if(isFound)
 println("The number is found.")
 else
 println( "The number is not found.")
 
+//fourth function to reverse a given arary
 var reversedArray =  reverseIntArray()
 println("Reversed Array: "+ printIntarray(reversedArray))
-ceasarcipher()
+
+
 
 }
 
+//fun ceasarcipher to encrypt a given text
 fun ceasarcipher(){
   val inputString = "Hello"
   println("Original text: " + inputString)
@@ -47,6 +56,7 @@ private fun cipher( text: String, shift: Int):String {
 }
 
 
+
 //fun average to find the average of a given array
 fun average(): Double{
   println("Please enter how many numbers to want: ")
@@ -63,6 +73,7 @@ fun average(): Double{
   return sum/arraySize
 }
 
+
 //arrReverse function to reverse an Array
  fun reverseIntArray(){
 
@@ -75,9 +86,6 @@ fun average(): Double{
        arr[i] = readln().toInt()
    }
 
-
-  /* println("Original Array: " + arr.joinToString(separator ",")) */
-
   for(i in 0 until arraySize/2){
 
     val aux = arr[i]
@@ -85,8 +93,8 @@ fun average(): Double{
     arr[arraySize - 1 - i] = aux
   }
 
-
 }
+
 
 //arrContain: search a value in an array
 
